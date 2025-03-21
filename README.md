@@ -10,21 +10,16 @@
 </ul>
 
 ### Software
-OC Version: 1.0.2
-macOS version: 14.7.4 Sonoma (100% working)
-AMD Power Gadget: Everything's working except fan control
+**OC Version:** 1.0.2  
+**macOS versions:** 14.7.4 Sonoma, 13.5 Ventura, 12.7.6 Monterey  
+**AMD Power Gadget:** Everything's working except fan control  
 
 ### Problems I've ran into
-```
-[PCI configuration begin]
-IOPCIConfigurator::configure kIOPCIEnumerationWaitTime 900s
-```
+##### `IOPCIConfigurator::configure kIOPCIEnumerationWaitTime 900s`
 Disable Above 4G Decoding and Resizable BAR and include npci=0x300 into boot-args.  
-<br>
-<img style="width: 40%;" src="https://preview.redd.it/stuck-on-logs-amdcpusupport-v0-mvfc0exddkic1.jpg?width=1080&crop=smart&auto=webp&s=34ea8e83179a1588f372220007940da7693fb8e1" alt="Photo is not mine, from Reddit"/>
-<br>
+##### `AMDCPUSupport::Start CPUID MWait`
 While installing, remove SMCAMDProcessor from your kexts. You can put it back in when you need it.  
-Also, you can try repatching with AMD Vaanilla patches.  
+Also, you can try repatching with AMD Vanilla patches.  
 
 ### Screenshots
 <img src="https://i.imgur.com/L9bZlMu.png" style="width: 40%;"/>
@@ -34,4 +29,4 @@ Also, you can try repatching with AMD Vaanilla patches.
 ### Credits
 <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://discord.com/invite/EfCYAJW&ved=2ahUKEwjN9K_VrYeMAxWbUlUIHbotCDgQFnoECBgQAQ&usg=AOvVaw0ji_l0wt9qIeQFcNhgRGna">AMD OS X Discord</a> - for tech support  
 <a href="https://dortania.github.io/">Dortania</a> - for OpenCore and the guides  
-<a href="https://reddit.com/r/hackintosh/">r/Hackintosh</a> - for moral and tech support
+<a href="https://reddit.com/r/hackintosh/">r/hackintosh</a> - for moral and tech support
